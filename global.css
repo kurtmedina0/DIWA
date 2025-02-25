@@ -1,0 +1,295 @@
+html {
+    scroll-behavior:smooth;
+}
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#page_1{
+    background-image: url("https://cdn.jsdelivr.net/gh/kurtmedina0/DIWA-storePNGImages@main/imageBackground2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 70%;
+}
+
+/*THIS IS THE NAVBAR*/
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    background: linear-gradient(to right, rgb(37, 150, 190),  rgba(33,100,121,255));
+    color: white;
+    position: fixed;
+    z-index:1000;
+    width: 100%;
+    
+}
+
+.logo, .search-bar, .login {
+    flex: 1;
+    height: 40px;
+
+}
+
+.menu {
+    flex: 2;
+    display: flex;
+    height: 40px;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+/*LOGO*/
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    margin: 0 3%;
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+    
+/*MENU*/
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10%;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar a:hover {
+    transform: scale(1.1);
+    font-weight: 500;
+}
+
+.menu-toggle {
+    display: none;
+}
+/*SEARCH-BAR*/
+.navbar .search-bar{
+    position: relative;
+}
+
+.navbar .search-bar .search-icon {
+    position: absolute;
+    z-index: 100;
+    width: 30px; 
+    height: 30px;
+    margin-top: 3px;
+    margin-left: 62%;
+}
+
+.search-bar .search {
+    padding: 12px 15px;
+    font-size: 16px;
+    border-radius: 30px;
+    width: 150px;
+    height: 12px;
+    padding-left: 50px;
+    outline: none;
+    border: none;
+    margin-left: 60%;
+}
+
+/*LOGIN*/
+.navbar .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .login .search-icon {
+    width: 250px; 
+    margin-top: 4%;
+    margin-left: 40%;
+    height: 160px;
+}
+
+/*THIS IS THE HERo*/
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    position: relative;
+    text-align: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 120px;
+    font-weight: 800;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 20px 0 40px;
+    line-height: 1.6;
+    position: absolute;
+    margin-left: -34%;
+    margin-top: 12%;
+    text-align: left;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: rgb(37, 150, 190);
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+#design_2 {
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    margin-top: -8%;
+    margin-left: -40%;
+}
+
+#design_3 {
+    height: 80px;
+    width: 140px;
+    position: absolute;
+    margin-top: 14%;
+    margin-left: -52%;
+}
+
+#design_4 {
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    margin-top: 19%;
+    margin-left: 40%;
+}
+
+@media only screen and (max-width: 600px) {
+    html {
+        scroll-behavior:smooth;
+    }
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    /* Navbar */
+    .navbar {
+        flex-direction: row;
+        padding: 10px;
+    }
+
+    /* Hide menu initially */
+    .menu {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        background: rgba(37, 150, 190, 0.9);
+        padding: 10px 0;
+        border-radius: 8px;
+    }
+
+    /* Toggle button */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: white;
+    }
+
+    /* Show menu when active */
+    .menu.active {
+        display: flex;
+    }
+
+    /* Search Bar */
+    .search-bar {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .search-bar .search {
+        width: 80%;
+        margin-left: 0;
+    }
+
+    /* Hero Section */
+    .hero h1 {
+        font-size: 80px;
+    }
+
+    .hero p {
+        font-size: 16px;
+        text-align: center;
+        width: 90%;
+    }
+
+    .button {
+        font-size: 16px;
+        padding: 10px 25px;
+    }
+
+    /* Hide unnecessary images */
+    #design_2, #design_4 {
+        display: none;
+    }
+
+    .search-bar {
+       position: absolute;
+        width: 100%;
+    }
+    .search-bar .search-icon{
+        position: relative;
+        transform: translateX(-120%); 
+    }
+
+    .login{
+        margin-left: -10%; 
+    }
+
+    .hero .hero-content p{
+        display: relative;
+        transform: translateX(20%); 
+    }
+}
+
+
+
+
+
+
+
+
